@@ -1,0 +1,21 @@
+a=[]
+b=[]
+c=[]
+evencount=0
+oddcount=0
+n=int(input("enter the size of list:"))
+for i in range(0,n):
+    list=int(input("enter elements in the list:"))
+    a.append(list)
+print(a)
+for i in a:
+    if i%2==0:
+        evencount=evencount+1 
+        b.append(i)
+    else:
+        oddcount=oddcount+1 
+        c.append(i)
+print("even count in list is:",evencount)
+print(b)
+print("odd count in list is:",oddcount)
+print(c)
