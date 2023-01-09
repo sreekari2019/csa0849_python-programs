@@ -1,3 +1,5 @@
+l=[] 
+n=int(input("enter list size: "))
 for i in range(n): 
     l2=int(input("enter list items: ")) 
     l.append(l2)
