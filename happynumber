@@ -1,0 +1,17 @@
+def squares(n):
+    sum=0
+    while(n):
+        sum+= (n%10)**2
+        n=n//10
+    return sum
+def happynum(n):
+    rec = set()
+    while(1):
+        n=squares(n)
+        if n==1:
+            return True
+        if n in rec:
+            return False
+        rec.add(n)
+num=int(input("enter a number: ")) 
+print(happynum(num))
