@@ -1,0 +1,17 @@
+s=input("enter a string: ") 
+lower=0
+upper=0
+numeric=0
+for i in s:
+    if i== '*':
+        break;
+    print(i)
+    if i.islower():
+        lower=lower+1 
+    if i.isupper():
+        upper=upper+1 
+    if i.isnumeric():
+        numeric=numeric+1 
+print("count of numbers in the string is: ",numeric) 
+print("count of upper case letters in string is: ",upper)
+print("count of lower case letters in string is: ",lower)
