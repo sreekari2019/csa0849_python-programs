@@ -1,0 +1,9 @@
+def fact(n):
+    if n==1:
+        return 1 
+    if n<0:
+        print("factorial doesnt exist")
+    else:
+        return n*fact(n-1) 
+a=int(input("enter a number for which factorial has to be found: ")) 
+print(fact(a)) 
