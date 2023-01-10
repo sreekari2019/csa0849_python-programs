@@ -1,4 +1,9 @@
-s=input("enter a string: ") 
+s=[]
+n=int(input("enter range: ")) 
+for j in range(n):
+    s2=input("enter list items one by one: ")
+    s.append(s2) 
+print(s)
 lower=0
 upper=0
 numeric=0
