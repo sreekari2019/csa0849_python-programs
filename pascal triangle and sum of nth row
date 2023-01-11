@@ -1,0 +1,22 @@
+def binomial_coefficient(n, k):
+    """Calculates the binomial coefficient C(n, k) = n! / (k! * (n-k)!)"""
+    res = 1
+    for i in range(k):
+        res *= (n-i)
+        res /= (i+1)
+    return int(res)
+def pascal_triangle_pyramid(n):
+    """Prints a Pascal triangle in pyramid shape with n rows"""
+    for i in range(n):
+        # print leading spaces
+        print(' ' * (n - i - 1), end='')
+        # print binomial coefficients
+        for j in range(i + 1):
+            print(binomial_coefficient(i, j), end=' ')
+        # move to the next line
+        print()
+
+pascal_triangle_pyramid(5) 
+n = int(input("Enter the row number: "))
+#sum of elements of the nth row
+print(sum([binomial_coefficient(n, i) for i in range(n+1)]))
