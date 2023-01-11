@@ -1,0 +1,9 @@
+perfect_numbers = []
+for num in range(1, 1001):
+    divisors = [i for i in range(1,num+1) if num % i == 0]
+    if sum(divisors[:-1]) == num:
+        perfect_numbers.append(num)
+for i in range(3):
+    factors = [j for j in range(1, perfect_numbers[i]+1) if perfect_numbers[i] % j == 0]
+    print(f"{perfect_numbers[i]} is a perfect number")
+    print("First 4 factors are:", factors[:4])
