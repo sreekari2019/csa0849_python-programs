@@ -1,0 +1,25 @@
+rows = int(input("Enter the number of rows: "))
+cols = int(input("Enter the number of columns: "))
+matrix1 = []
+matrix2 = []
+result = []
+print("Enter the elements of the first matrix:")
+for i in range(rows):
+    a =[]
+    for j in range(cols):
+        a.append(int(input()))
+    matrix1.append(a)
+print("Enter the elements of the second matrix:")
+for i in range(rows):
+    b =[]
+    for j in range(cols):
+        b.append(int(input()))
+    matrix2.append(b)
+for i in range(rows):
+    c = []
+    for j in range(cols):
+        c.append(matrix1[i][j] + matrix2[i][j])
+    result.append(c)
+print("The result of matrix addition is:")
+for r in result:
+    print(r)
