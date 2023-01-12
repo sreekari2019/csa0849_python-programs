@@ -1,0 +1,13 @@
+def separate_vowels_consonants(word):
+    vowels = "aeiouAEIOU"
+    vowels_list = []
+    consonants_list = []
+    for letter in word:
+        if letter in vowels:
+            vowels_list.append(letter)
+        else:
+            consonants_list.append(letter)
+    return "Consonants: " + " ".join(consonants_list) + "\nVowels: " + " ".join(vowels_list)
+word = input("Given word: ")
+result = separate_vowels_consonants(word)
+print(result)
