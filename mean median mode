@@ -1,0 +1,9 @@
+import numpy
+c=[2,3,4,5,6,6] 
+x=numpy.mean(c)
+print(x) 
+y=numpy.median(c)
+print(y) 
+from scipy import stats
+z=stats.mode(c)
+print(z)
