@@ -1,0 +1,11 @@
+def simple_interest(principal, years, senior_citizen):
+    if senior_citizen:
+        rate_of_interest = 12
+    else:
+        rate_of_interest = 10
+    return (principal * years * rate_of_interest) / 100
+principal = int(input("Enter the principal amount: "))
+years = int(input("Enter the number of years: "))
+senior_citizen = input("Is the customer a senior citizen (y/n): ").lower() == 'y'
+interest = simple_interest(principal, years, senior_citizen)
+print("Interest:", interest)
