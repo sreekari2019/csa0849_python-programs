@@ -1,0 +1,9 @@
+import re
+def is_valid_number(s):
+    pattern = r'^[-+]?((\d+(\.\d+)?)|(\.\d+))([eE][-+]?\d+)?$'
+    return re.match(pattern, s) is not None
+s = input("Enter a string: ")
+if is_valid_number(s):
+    print("The input is a valid number.")
+else:
+    print("The input is not a valid number.")
