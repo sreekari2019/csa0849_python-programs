@@ -1,0 +1,8 @@
+start_num = float(input("Enter the starting number: "))
+max_lines = int(input("Max number of lines printed: "))
+
+for i in range(1, max_lines + 1):
+    for j in range(i):
+        print(round(start_num, 1), end=" ")
+        start_num += 0.1
+    print()
