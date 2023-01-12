@@ -1,0 +1,19 @@
+def modify_string(s):
+    # frequency of each character in s
+    freq = [0] * 26
+    for i in s:
+        freq[ord(i) - ord('a')] += 1
+    # circular distance from each character
+    distance = [0] * 26
+    for i in range(26):
+        distance[i] = (i + freq[i]) % 26
+    # replace each character in s with the corresponding character
+    # from distance
+    modified_s = ""
+    for i in s:
+        modified_s += chr(ord('a') + distance[ord(i) - ord('a')])
+    return modified_s
+
+#Example usage
+s = input("Enter the string: ")
+print("Modified string: ", modify_string(s))
