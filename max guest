@@ -1,0 +1,8 @@
+def max_guests(T, E, L):
+    guests = 0
+    max_guests = 0
+    for i in range(T):
+        guests += E[i] - L[i]
+        max_guests = max(max_guests, guests)
+    return max_guests
+print("Maximum number of guests on the cruise at an instance: ",max_guests(5,[7,0,5,1,3],[1,2,1,3,4]) )
