@@ -1,0 +1,8 @@
+def print_numbers(M, N, K):
+    for i in range(M, N+1, K):
+        print(i, end=', ')
+    print()
+M = int(input("Enter M: "))
+N = int(input("Enter N: "))
+K = int(input("Enter K: "))
+print_numbers(M, N, K)
