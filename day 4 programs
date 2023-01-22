@@ -58,4 +58,42 @@ for i in range(1,r+1):
         print(j/10,end=' ') 
     print('\r')  
     
- ## 
+ ## mean median and mode 
+import numpy
+c=[2,3,4,5,6,6] 
+x=numpy.mean(c)
+print(x) 
+y=numpy.median(c)
+print(y) 
+from scipy import stats
+z=stats.mode(c)
+print(z) 
+
+## printing vowels and consonants separately in given string 
+s=input("enter string: ") 
+print("vowels ") 
+for i in s:
+    if i in "aeiouAEIOU":
+        print(i,end=",") 
+print("\nconsonants ")
+for i in s:
+    if i not in "aeiouAEIOU":
+        print(i,end=",") 
+        
+## printing numbers less than that number in the list
+s=int(input("enter size: ")) 
+i=0 
+testlist,resultlist=[],[] 
+for n in range(s):
+    e=int(input()) 
+    testlist.append(e) 
+while i<len(testlist):
+    k=testlist[i] 
+    count=0 
+    for j in testlist:
+        if k>j:
+            count=count+1 
+    resultlist.append(count) 
+    i=i+1 
+print(resultlist) 
+
