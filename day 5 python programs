@@ -1,0 +1,147 @@
+## program to find length of the last word in the given string
+def findLength(str):
+    count = 0
+    flag = False
+    for i in range(len(str) - 1, -1, -1):
+        if ((str[i] >= 'a' and str[i] <= 'z') or (str[i] >= 'A' and str[i] <= 'Z')):
+            flag = True
+            count += 1
+        elif (flag == True):
+            return count
+    return count
+str = input("enter string: ")
+print("The length of last word is",
+findLength(str))  
+
+## printing all composite numbers between a and b 
+a=int(input('Enter m: '))
+b=int(input('Enter n: '))
+for number in range(a,b+1):
+    factor=0
+    for i in range(1,number):
+      if number%i==0:
+        factor=i
+    if factor>1:
+      print (number) 
+      
+ ## bonus calculation 
+ import sys
+grade = input("Enter the grade of the employee (A or B): ").upper()
+if grade != "A" and grade != "B":
+    print("Invalid grade. Only A or B is accepted.")
+    sys.exit()
+else:
+    salary = float(input("Enter the salary of the employee: "))
+    if salary < 10000:
+        salary += salary * 0.02
+    bonus = 0
+    if grade == "A":
+        bonus += salary * 0.05
+    elif grade == "B":
+        bonus += salary * 0.1
+    total_salary = salary + bonus
+    print("Bonus: $" + str(bonus))
+    print("Total salary with bonus: $" + str(total_salary))
+    
+## lcm and gcd of given list 
+import math
+def gcd_lcm_n_numbers(n, numbers):
+    if n < 1:
+        print("Invalid input")
+    else:
+        gcd = numbers[0]
+        lcm = numbers[0]
+        for i in range(1, n):
+            gcd = math.gcd(gcd, numbers[i])
+            lcm = lcm*numbers[i]//math.gcd(lcm, numbers[i])
+        return gcd, lcm
+n = int(input())
+numbers =[]
+for i in range(n):
+    g=int(input("enter elements:")) 
+    numbers.append(g) 
+print("GCD is:", gcd_lcm_n_numbers(n, numbers)[0])
+print("LCM is:", gcd_lcm_n_numbers(n, numbers)[1]) 
+
+## calculating frequncy of each number in the list 
+def find_frequency(arr):
+    frequency = {}
+    for i in arr:
+        if i in frequency:
+            frequency[i] += 1
+        else:
+            frequency[i] = 1
+    return frequency
+arr = [1, 2, 8, 3, 2, 2, 2, 5, 1]
+frequency = find_frequency(arr)
+
+print("Element | Frequency")
+print("--------------------------")
+for key, value in frequency.items():
+    print(key, "|", value)
+    
+ ## mathematical operations 
+ x = int(input("Enter value of x: "))
+n = int(input("Enter value of n: "))
+choice = int(input("Enter choice (1 for Pow, 2 for Add, 3 for Sub, 4 for Mul, 5 for Div): "))
+if choice == 1:
+    result = x ** n
+    print("Pow(x,n) = ", result)
+elif choice == 2:
+    result = x + n
+    print("Add(x,n) = ", result)
+elif choice == 3:
+    result = x - n
+    print("Sub(x,n) = ", result)
+elif choice == 4:
+    result = x * n
+    print("Mul(x,n) = ", result)
+elif choice == 5:
+    result = x / n
+    print("Div(x,n) = ", result)
+else:
+    print("Invalid choice")
+    
+ ## voting eligibility 
+ age=int(input("enter age: ")) 
+if age>18:
+    print("eligible for voting") 
+else:
+    print(" still",18-age,"years left to get eligibility for voting")  
+    
+## printing pattern 
+r=int(input("enter max rows: ")) 
+if r<=0:
+    print("enter positive number")
+for i in range(1,r+1):
+    for j in range(1,i+1):
+        print("%",end=" ") 
+    print("\r") 
+    
+## program to count prime and composite numbers 
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5)+1):
+        if n % i == 0:
+            return False
+    return True
+prime_count = 0
+composite_count = 0
+n = input("Enter the number of integers to be entered: ") 
+try:
+    n = int(n)
+    for i in range(n):
+        num = input("Enter an integer: ")
+        try:
+            num = int(num)
+            if is_prime(num):
+                prime_count += 1
+            else:
+                composite_count += 1
+        except ValueError:
+            print("Enter integers only")
+except ValueError:
+    print("Enter integers only")
+print("Number of prime numbers: ", prime_count)
+print("Number of composite numbers: ", composite_count)
