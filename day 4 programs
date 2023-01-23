@@ -45,8 +45,8 @@ print("student_users are:",student_users)
 ## 5. reverse of string using loop 
 s=input("enter a string: ") 
 s1=" " 
-for i in s:
-    s1=i+s1
+for i in range(len(s)-1,-1,-1):
+    s1+=s[i]
 print(s1) 
 
 ## 6. pattern 
