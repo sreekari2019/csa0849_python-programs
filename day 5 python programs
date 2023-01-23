@@ -1,4 +1,4 @@
-## program to find length of the last word in the given string
+## 1. program to find length of the last word in the given string
 def findLength(str):
     count = 0
     flag = False
@@ -13,7 +13,8 @@ str = input("enter string: ")
 print("The length of last word is",
 findLength(str))  
 
-## printing all composite numbers between a and b 
+
+## 2.printing all composite numbers between a and b 
 a=int(input('Enter m: '))
 b=int(input('Enter n: '))
 for number in range(a,b+1):
@@ -24,7 +25,8 @@ for number in range(a,b+1):
     if factor>1:
       print (number) 
       
- ## bonus calculation 
+
+## 3. bonus calculation 
  import sys
 grade = input("Enter the grade of the employee (A or B): ").upper()
 if grade != "A" and grade != "B":
@@ -43,7 +45,8 @@ else:
     print("Bonus: $" + str(bonus))
     print("Total salary with bonus: $" + str(total_salary))
     
-## lcm and gcd of given list 
+
+## 4.lcm and gcd of given list 
 import math
 def gcd_lcm_n_numbers(n, numbers):
     if n < 1:
@@ -63,7 +66,8 @@ for i in range(n):
 print("GCD is:", gcd_lcm_n_numbers(n, numbers)[0])
 print("LCM is:", gcd_lcm_n_numbers(n, numbers)[1]) 
 
-## calculating frequncy of each number in the list 
+
+## 5.calculating frequncy of each number in the list 
 def find_frequency(arr):
     frequency = {}
     for i in arr:
@@ -74,13 +78,13 @@ def find_frequency(arr):
     return frequency
 arr = [1, 2, 8, 3, 2, 2, 2, 5, 1]
 frequency = find_frequency(arr)
-
 print("Element | Frequency")
 print("--------------------------")
 for key, value in frequency.items():
     print(key, "|", value)
     
- ## mathematical operations 
+
+## 6.mathematical operations 
  x = int(input("Enter value of x: "))
 n = int(input("Enter value of n: "))
 choice = int(input("Enter choice (1 for Pow, 2 for Add, 3 for Sub, 4 for Mul, 5 for Div): "))
@@ -100,16 +104,37 @@ elif choice == 5:
     result = x / n
     print("Div(x,n) = ", result)
 else:
-    print("Invalid choice")
+    print("Invalid choice") 
     
- ## voting eligibility 
+
+##7. program to find out how many integers can divide both the numbers
+ def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+def count_divisors(a, b):
+    gcd_ab = gcd(a, b)
+    divisors = 0
+    for i in range(1, int(gcd_ab**0.5)+1):
+        if gcd_ab % i == 0:
+            divisors += 2
+    if gcd_ab**0.5 == int(gcd_ab**0.5):
+        divisors -= 1
+    return divisors
+a = 12
+b = 18
+print(count_divisors(a,b))
+
+    
+ ## 9.voting eligibility 
  age=int(input("enter age: ")) 
 if age>18:
     print("eligible for voting") 
 else:
     print(" still",18-age,"years left to get eligibility for voting")  
     
-## printing pattern 
+
+## 10.printing pattern 
 r=int(input("enter max rows: ")) 
 if r<=0:
     print("enter positive number")
@@ -118,7 +143,8 @@ for i in range(1,r+1):
         print("%",end=" ") 
     print("\r") 
     
-## program to count prime and composite numbers 
+
+## 8.program to count prime and composite numbers 
 def is_prime(n):
     if n < 2:
         return False
