@@ -1,4 +1,4 @@
-## sorting in ascending or descending order of list based on users choice
+## 1.sorting in ascending or descending order of list based on users choice
 def sorting(lst,order):
     if order=='A':
         s=sorted(lst) 
@@ -16,7 +16,7 @@ for i in range(n):
     lst.append(a) 
 sorting(lst,order) 
 
-## counting vowels in string 
+##2.counting vowels in string 
 s=input("enter string: ") 
 v='aeiouAEIOU'
 vc=0
@@ -25,7 +25,7 @@ for i in s:
         vc=vc+1 
 print(vc) 
 
-## printing square and cube of decimal num 
+## 3. printing square and cube of decimal num 
 def square(n):
     return n*n 
 def cube(n):
@@ -34,7 +34,7 @@ n=float(input())
 print(square(n)) 
 print(cube(n)) 
 
-## program to count no of student users 
+## 4. program to count no of student users 
 t_users=int(input("enter total users: ")) 
 staff_users=int(input("enter staff users: "))
 nt=staff_users//3 
@@ -42,14 +42,14 @@ staff_users=staff_users+nt
 student_users=t_users-staff_users 
 print("student_users are:",student_users) 
 
-## reverse of string using loop 
+## 5. reverse of string using loop 
 s=input("enter a string: ") 
 s1=" " 
 for i in s:
     s1=i+s1
 print(s1) 
 
-## pattern 
+## 6. pattern 
 r=int(input("enter rows: ")) 
 if r<=0:
     print("enter positive integer")
@@ -58,7 +58,7 @@ for i in range(1,r+1):
         print(j/10,end=' ') 
     print('\r')  
     
- ## mean median and mode 
+ ## 8. mean median and mode 
 import numpy
 c=[2,3,4,5,6,6] 
 x=numpy.mean(c)
@@ -69,7 +69,7 @@ from scipy import stats
 z=stats.mode(c)
 print(z) 
 
-## printing vowels and consonants separately in given string 
+## 9. printing vowels and consonants separately in given string 
 s=input("enter string: ") 
 print("vowels ") 
 for i in s:
@@ -80,7 +80,7 @@ for i in s:
     if i not in "aeiouAEIOU":
         print(i,end=",") 
         
-## printing numbers less than that number in the list
+## 7. printing numbers less than that number in the list
 s=int(input("enter size: ")) 
 i=0 
 testlist,resultlist=[],[] 
@@ -97,3 +97,11 @@ while i<len(testlist):
     i=i+1 
 print(resultlist) 
 
+## 10. reversing an integer using loop   
+number = int(input("Enter the integer number: "))    
+revs_number = 0    
+while (number > 0):    
+    remainder = number % 10  
+    revs_number = (revs_number * 10) + remainder  
+    number = number // 10    
+print("The reverse number is : {}".format(revs_number)) 
